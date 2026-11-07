@@ -1,6 +1,6 @@
 from contextlib import asynccontextmanager
 from sqlalchemy import text
-from app.DB.database import engine, Base
+from app.db.database import engine, Base
 from app.models.task import Task
 from fastapi import FastAPI
 

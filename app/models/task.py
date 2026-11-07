@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, Text, DateT
 from sqlalchemy import func
 from sqlalchemy.orm import mapped_column, Mapped
 
-from app.DB.database import Base
+from app.db.database import Base
 
 class Task(Base):
 
