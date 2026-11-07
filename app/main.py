@@ -3,6 +3,10 @@ from sqlalchemy import text
 from app.db.database import engine, Base
 from app.models.task import Task
 from fastapi import FastAPI
+from app.routers.task import router as task_router
+
+
+
 
 
 @asynccontextmanager
@@ -41,3 +45,6 @@ def health_check():
     return{
         "status": "healthy",
     }
+
+
+app.include_router(task_router)
