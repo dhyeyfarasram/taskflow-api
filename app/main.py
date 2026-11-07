@@ -4,9 +4,8 @@ from app.db.database import engine, Base
 from app.models.task import Task
 from fastapi import FastAPI
 from app.routers.task import router as task_router
-
-
-
+from app.routers.auth import router as auth_router
+from app.models.user import User
 
 
 @asynccontextmanager
@@ -46,5 +45,5 @@ def health_check():
         "status": "healthy",
     }
 
-
+app.include_router(auth_router)
 app.include_router(task_router)
